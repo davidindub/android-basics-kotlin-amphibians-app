@@ -31,6 +31,7 @@
 
         <!-- TODO: set the listData binding to the list of Amphibians from the view model -->
         <androidx.recyclerview.widget.RecyclerView
+            app:listData="@{viewModel.amphibians}"
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,12 +44,14 @@
         <!-- TODO: set the apiStatus binding to the status from the view model -->
         <ImageView
             android:id="@+id/status_image"
+            app:apiStatus="@{viewModel.status}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
